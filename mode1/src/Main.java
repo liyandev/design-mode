@@ -47,18 +47,28 @@ class MuteQuack implements QuackBehavior{
 }
 
 
-class Duck {
+abstract class Duck {
     FlyBehavior flyBehavior;
     QuackBehavior quackBehavior;
+
+    public void setFlyBehavior(FlyBehavior fb){
+        flyBehavior = fb ;
+    }
+
+    public void setQuackBehavior(QuackBehavior qb){
+        quackBehavior = qb;
+    }
+
     public void peformQuack(){
         quackBehavior.quack();
     }
+
     public void swim(){
-
+        System.out.println("all ducks float, even decoys");
     }
-    public void display(){
 
-    }
+    public abstract void display();
+
     public void peformFly(){
         flyBehavior.fly();
     }
@@ -96,5 +106,11 @@ public class Main{
         t.display();
         t.peformQuack();
         t.peformFly();
+        System.out.println("now i'm changing fly way ~");
+        t.setFlyBehavior(new FlyWithWings());
+        t.peformFly();
+        System.out.println("now i'm changing quack way ~");
+        t.setQuackBehavior(new Squeak());
+        t.peformQuack();
     }
 }
