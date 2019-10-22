@@ -8,7 +8,7 @@
 *
 * 2.Observable将setChanged（）方法保护起来了，意味着除非继承自Observable，否则无法创建Observable实例并组合到自己的对象中来。
 *   违反了设计原则中的“多用组合，少用继承”。
-*   
+*
 * */
 
 import java.util.Observable;
