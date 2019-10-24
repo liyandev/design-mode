@@ -25,3 +25,4 @@ hs_err_pid*
 #intelliJ IDE
 .idea/*
 */.idea/*
+*.iml
