@@ -1,5 +1,6 @@
 # 设计模式学习笔记
-## head first design mode demo
+-- head first 设计模式
+## demo
 
 - 设计模式1：策略模式
  -- demo：鸭子应用
