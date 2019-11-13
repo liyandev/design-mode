@@ -1,3 +1,7 @@
+/*
+* createPizza()方法是工厂方法，用来制造产品
+* */
+
 public class ChicagoPizzaStore extends PizzaStore {
     Pizza createPizza(String item) {
         if(item.equals("cheese")){

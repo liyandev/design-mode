@@ -1,5 +1,9 @@
 import java.util.ArrayList;
 
+/*
+* 产品类
+* */
+
 public abstract class Pizza {
     String name;
     String dough;
