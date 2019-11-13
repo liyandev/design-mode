@@ -1,45 +1,33 @@
-public class Pizza {
-    private String name;
-    private String type;
-    private String price;
+import java.util.ArrayList;
 
-    public String getName() {
+public abstract class Pizza {
+    String name;
+    String dough;
+    String sauce;
+    ArrayList toppings = new ArrayList();
+
+    void prepare(){
+        System.out.println("Prepareing" + name);
+        System.out.println("Tossing dough…");
+        System.out.println("Adding sauce…");
+        System.out.println("Adding toppings:");
+        for (int i = 0; i < toppings.size(); i++){
+            System.out.println(" " + toppings.get(i));
+        }
+    }
+
+    void bake(){
+        System.out.println("Bake for 25 minutes at 350");
+    }
+
+    void cut(){
+        System.out.println("Cutting the pizza into diagonal slices");
+    }
+
+    void box(){
+        System.out.println("Place pizza in official PizzaStore box");
+    }
+    public String getName(){
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public String getPrice() {
-        return price;
-    }
-
-    public void setPrice(String price) {
-        this.price = price;
-    }
-
-    public void prepare(){
-
-    }
-
-    public void bake(){
-
-    }
-
-    public void cut(){
-
-    }
-
-    public void box(){
-
     }
 }

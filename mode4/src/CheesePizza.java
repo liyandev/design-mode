@@ -1,4 +1,4 @@
-public class CheesePizza extends Pizza{
+public class CheesePizza extends Pizza {
     public CheesePizza(){
 
     }
